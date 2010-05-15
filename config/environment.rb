@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   # nifty-generators can't be present, as it causes script/generator fail
   #config.gem "nifty-generators"
+  #config.gem "delayed_job" - this is now a plugin
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

@@ -1,2 +1,5 @@
 config/database.yml
 nbproject/private
+log/*
+tmp/*
+db/*.sqlite3

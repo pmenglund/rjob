@@ -1,0 +1,13 @@
+one:
+  job_id: 1
+  host: MyString
+  result: 1
+  stdout: MyText
+  stderr: MyText
+
+two:
+  job_id: 1
+  host: MyString
+  result: 1
+  stdout: MyText
+  stderr: MyText

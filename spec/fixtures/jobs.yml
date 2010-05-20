@@ -1,0 +1,11 @@
+one:
+  title: MyString
+  script: MyString
+  command: MyText
+  hosts: MyText
+
+two:
+  title: MyString
+  script: MyString
+  command: MyText
+  hosts: MyText

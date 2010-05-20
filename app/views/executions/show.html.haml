@@ -1,0 +1,24 @@
+- title "Execution"
+
+%p
+  %strong Job:
+  =h @execution.job_id
+%p
+  %strong Host:
+  =h @execution.host
+%p
+  %strong Result:
+  =h @execution.result
+%p
+  %strong Stdout:
+  =h @execution.stdout
+%p
+  %strong Stderr:
+  =h @execution.stderr
+
+%p
+  = link_to "Edit", edit_execution_path(@execution)
+  |
+  = link_to "Destroy", @execution, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", executions_path

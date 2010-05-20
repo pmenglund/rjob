@@ -1,0 +1,20 @@
+- form_for @job do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title, :size => "80"
+  %p
+    = f.label :command
+    %br
+    = f.text_area :command, :size => "80x5"
+  %p
+    = f.label :user
+    %br
+    = f.text_field :user, :size => "80"
+  %p
+    = f.label :hosts
+    %br
+    = f.text_area :hosts, :size => "80x5"
+  %p
+    = f.submit

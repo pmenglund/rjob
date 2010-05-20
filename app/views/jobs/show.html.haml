@@ -1,0 +1,42 @@
+- title "Job"
+
+%p
+  %strong Id:
+  =h @job.id
+%p
+  %strong Title:
+  =h @job.title
+%p
+  %strong Command:
+  =h @job.command
+%p
+  %strong User:
+  =h @job.user
+%p
+  %strong Hosts:
+  =h @job.hosts
+
+%p
+  = link_to "Rerun", rerun_job_path(@job), :method => :post
+  |
+  = link_to "Retry failed", retry_job_path(@job), :method => :post
+  |
+  = link_to "Destroy", @job, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", jobs_path
+
+%table
+  %tr
+    %th Host
+    %th Status
+    %th Result
+    %th stdout
+    %th stderr
+  - @job.executions.each do |exec|
+    %tr
+      %td= exec.host
+      %td= exec.status
+      %td= exec.result
+      %td
+        %pre= exec.stdout.gsub(/\n/, "<br />")
+      %td= exec.stderr

@@ -1,0 +1,21 @@
+- title "Executions"
+
+%table
+  %tr
+    %th Job
+    %th Host
+    %th Result
+    %th Stdout
+    %th Stderr
+  - for execution in @executions
+    %tr
+      %td= h execution.job_id
+      %td= h execution.host
+      %td= h execution.result
+      %td= h execution.stdout
+      %td= h execution.stderr
+      %td= link_to 'Show', execution
+      %td= link_to 'Edit', edit_execution_path(execution)
+      %td= link_to 'Destroy', execution, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Execution", new_execution_path

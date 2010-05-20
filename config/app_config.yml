@@ -1,0 +1,11 @@
+development:
+  authenticate: false
+  domain: localhost:3000
+
+test:
+  authenticate: false
+  domain: test.host
+
+production:
+  authenticate: true
+  domain: example.com

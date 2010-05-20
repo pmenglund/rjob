@@ -1,0 +1,21 @@
+- title "Jobs"
+
+%table
+  %tr
+    %th Id
+    %th Title
+    %th Pending
+    %th Running
+    %th Finished
+  - for job in @jobs
+    %tr
+      %td= h job.id
+      %td= h job.title
+      %td= h job.pending_executions.size
+      %td= h job.running_executions.size
+      %td= h job.finished_executions.size
+      %td= link_to 'Show', job
+      %td= link_to 'Rerun', rerun_job_path(job), :method => :post
+      %td= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Job", new_job_path

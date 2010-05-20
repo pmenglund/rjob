@@ -7,3 +7,7 @@ could satisfy what I needed:
 - run things in paralell (with a knob to limit max connections)
 - rerun failed jobs (due to system being down/unreachable)
 - easy viewing of the result
+
+== TODO
+- hosts should not be stored as a text
+- alerts when jobs are done
